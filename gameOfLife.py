@@ -26,6 +26,7 @@ def redrawAll():
                 Sprite(whiteRect,(y*BB,x*BB))
             elif boardList[x,y] == 1:
                 Sprite(blackRect,(y*BB,x*BB))
+
 """
 def numNeighbors(row,column):
     
