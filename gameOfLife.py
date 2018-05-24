@@ -4,30 +4,44 @@
 
 #CONSTANTS
 
-boardHeight = 12
-boardWidth = 12
+BH = 12
+BW = 12
+BB = 20
 
 #FUNCTIONS
 
 def buildBoard():
-    board = [0]*boardHeight
-    boardw = [0]*boardWidth
+    boardList = [0]*BH
+    boardw = [0]*BW
     for i in range(0,12):
-        board[i] = boardw
-    print(board)
-
-"""
-def redrawAll():
+        boardList[i] = boardw
     
+
+def redrawAll():
+    for x in range(0,12):
+        for y in range(0,12):
+            Sprite(whiteRectangle,x*BB,y*BB)
+"""
 def numNeighbors(row,column):
     
 def nextGeneration():
     
 def mouseClick(event):
-
+"""
 
 
 
 if __name__ == '__main__':
-"""
-buildBoard()
+    
+    #GRAPHICS
+        
+        #COLORS
+        black = Color(0x000000,1)
+        white = Color(0xFFFFFF,1)
+    
+    blackLine = lineStyle(0,black)
+    whiteRect = RectangleAsset(BB,BB,blackLine,white)
+    blackRect = RectangleAsset(BB,BB,blackLine,black)
+    
+    
+    
