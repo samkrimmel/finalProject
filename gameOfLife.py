@@ -10,10 +10,10 @@ boardWidth = 12
 #FUNCTIONS
 
 def buildBoard():
-    board = [0]*boardHeight
-    for i in range(0,12):
-        board[i].append(0)
-    print(board)
+    for x in range(0,3):
+        for y in range(0,3):
+            print(board[x][y], end = ' ')
+        print()
 """
 def redrawAll():
     
