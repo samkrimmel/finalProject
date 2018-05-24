@@ -43,5 +43,7 @@ if __name__ == '__main__':
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
     
+    App().run()
+    
     
     
