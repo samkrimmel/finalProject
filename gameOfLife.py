@@ -21,6 +21,7 @@ def buildBoard():
 
 def redrawAll():
     buildBoard()
+    print(boardList)
     for x in range(0,BH):
         for y in range(0,BW):
             if boardList[x][y] == 0:
