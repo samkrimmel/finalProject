@@ -2,6 +2,8 @@
 #5/23/18
 #gameOfLife.py - neat
 
+from ggame import *
+
 #CONSTANTS
 
 BH = 12
