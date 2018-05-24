@@ -15,7 +15,7 @@ BB = 20
 def buildBoard():
     boardList = [0]*BH
     boardw = [0]*BW
-    for i in range(0,12):
+    for i in range(0,BH):
         boardList[i] = boardw
     
 
