@@ -6,7 +6,7 @@ from ggame import *
 
 #CONSTANTS
 
-BH = 29
+BH = 27
 BW = 50
 BB = 20
 
