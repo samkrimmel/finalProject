@@ -14,7 +14,7 @@ def buildBoard():
     for i in range(0,12):
         board[i].append(0)
     print(board)
-
+"""
 def redrawAll():
     
 def numNeighbors(row,column):
@@ -22,7 +22,7 @@ def numNeighbors(row,column):
 def nextGeneration():
     
 def mouseClick(event):
-
+"""
 buildBoard()
 
 
