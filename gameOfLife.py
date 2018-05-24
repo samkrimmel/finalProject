@@ -23,9 +23,7 @@ def nextGeneration():
     
 def mouseClick(event):
 
-def buildBoard()
-
-App().run
+buildBoard()
 
 
 if __name__ == '__main__':
