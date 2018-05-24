@@ -6,8 +6,8 @@ from ggame import *
 
 #CONSTANTS
 
-BH = 27
-BW = 50
+BH = 25
+BW = 40
 BB = 20
 
 #FUNCTIONS
