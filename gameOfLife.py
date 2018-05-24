@@ -12,7 +12,7 @@ boardWidth = 12
 def buildBoard():
     board = [0]*boardHeight
     boardw = [0]*boardWidth
-    for i in range(0,13):
+    for i in range(0,12):
         board[i] = boardw
     print(board)
 
