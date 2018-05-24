@@ -36,8 +36,8 @@ if __name__ == '__main__':
     #GRAPHICS
         
         #COLORS
-        black = Color(0x000000,1)
-        white = Color(0xFFFFFF,1)
+    black = Color(0x000000,1)
+    white = Color(0xFFFFFF,1)
     
     blackLine = lineStyle(0,black)
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
