@@ -18,7 +18,7 @@ def buildBoard():
 def redrawAll():
     
 def numNeighbors(row,column):
-
+    
 def nextGeneration():
     
 def mouseClick(event):
