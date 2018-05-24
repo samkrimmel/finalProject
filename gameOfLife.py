@@ -20,6 +20,7 @@ def buildBoard():
     
 
 def redrawAll():
+    buildBoard()
     for x in range(0,BH):
         for y in range(0,BW):
             if boardList[x][y] == 0:
@@ -49,7 +50,6 @@ if __name__ == '__main__':
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
     
-    buildBoard()
     redrawAll()
     App().run()
     
