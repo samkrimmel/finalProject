@@ -22,7 +22,7 @@ def buildBoard():
 def redrawAll():
     for x in range(0,12):
         for y in range(0,12):
-            Sprite(whiteRect,x*BB,y*BB)
+            Sprite(whiteRect,(x*BB),(y*BB))
 """
 def numNeighbors(row,column):
     
