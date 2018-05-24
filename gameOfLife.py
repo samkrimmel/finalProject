@@ -22,9 +22,10 @@ def numNeighbors(row,column):
 def nextGeneration():
     
 def mouseClick(event):
-"""
-buildBoard()
+
+
 
 
 if __name__ == '__main__':
-    
+"""
+buildBoard()
