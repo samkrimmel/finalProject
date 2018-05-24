@@ -6,8 +6,8 @@ from ggame import *
 
 #CONSTANTS
 
-BH = 12
-BW = 12
+BH = 30
+BW = 30
 BB = 20
 
 #FUNCTIONS
@@ -20,8 +20,8 @@ def buildBoard():
     
 
 def redrawAll():
-    for x in range(0,12):
-        for y in range(0,12):
+    for x in range(0,BH):
+        for y in range(0,BW):
             Sprite(whiteRect,(x*BB,y*BB))
 """
 def numNeighbors(row,column):
