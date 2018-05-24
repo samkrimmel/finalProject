@@ -9,21 +9,21 @@ boardWidth = 12
 
 #FUNCTIONS
 
-buildBoard():
+def buildBoard():
     board = [0]*boardHeight
     for i in range(0,12):
         board[i].append(0)
     print(board)
 
-redrawAll():
+def redrawAll():
     
-numNeighbors(row,column):
+def numNeighbors(row,column):
 
-nextGeneration():
+def nextGeneration():
     
-mouseClick(event):
+def mouseClick(event):
 
-buildBoard()
+def buildBoard()
 
 App().run
 
