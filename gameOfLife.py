@@ -17,6 +17,7 @@ def buildBoard(): ####DICTIONARY
     boardw = [0]*BW
     for i in range(0,BH):
         boardList[i] = boardw
+    return boardList
     
 
 def redrawAll():
@@ -49,7 +50,7 @@ def mouseClick(event):
 if __name__ == '__main__':
     
     data = {}
-    data['boardList'] = []
+    data['boardList'] = buildBoard()
     
     #GRAPHICS
         
