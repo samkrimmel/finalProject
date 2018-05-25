@@ -32,8 +32,9 @@ def redrawAll():
 def numNeighbors(row,column):
     
 def nextGeneration():
-    
+"""
 def mouseClick(event):
+    """
     if click on next gen:
         refuse all next clicks
         nextgen
@@ -42,8 +43,10 @@ def mouseClick(event):
             change to 1
         elif boardList[black(event.x//BB)-1][(event.y//BB)-1] == 1:
             change to 0
-        redrawAll()
-"""
+            """
+        
+    redrawAll()
+
 
 
 
