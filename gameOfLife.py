@@ -35,7 +35,7 @@ def nextGeneration():
 """
 def mouseClick(event):
     """
-    if click on next gen:
+    if (event.x>((BW*BB/2)-BB) and event.x<((BW*BB/2)-BB)+BB*2) and y section
         refuse all next clicks
         nextgen
     elif click within board:
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     blackLine = LineStyle(1,black)
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
-    nextGenButton = RectangleAsset(40,20,blackLine,white)
+    nextGenButton = RectangleAsset(BB*2,BH,blackLine,white)
     nextGenText = TextAsset('Next Generation',fill=black, style='bold 50pt Times')
     
     Sprite(nextGenButton,(((BW*BB/2)-BB),(BH*BB)+30))
