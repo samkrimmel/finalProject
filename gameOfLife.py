@@ -40,6 +40,9 @@ def mouseClick(event):
 
 if __name__ == '__main__':
     
+    data = {}
+    data['boardList'] = []
+    
     #GRAPHICS
         
         #COLORS
