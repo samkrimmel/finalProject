@@ -13,19 +13,19 @@ BB = 20
 #FUNCTIONS
 
 def buildBoard(): ####DICTIONARY
-    boardList = [0]*BH
+    data['boardList'] = [0]*BH
     boardw = [0]*BW
     for i in range(0,BH):
-        boardList[i] = boardw
+        data['boardList[i]'] = boardw
     
 
 def redrawAll():
     buildBoard()
     for x in range(0,BH):
         for y in range(0,BW):
-            if boardList[x][y] == 0:
+            if data['boardList[x][y]'] == 0:
                 Sprite(whiteRect,(y*BB,x*BB))
-            elif boardList[x,y] == 1:
+            elif data['boardList[x,y]'] == 1:
                 Sprite(blackRect,(y*BB,x*BB))
 
 """
