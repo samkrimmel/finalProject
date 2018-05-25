@@ -67,7 +67,7 @@ if __name__ == '__main__':
     nextGenButton = RectangleAsset(40,10,blackLine,white)
     nextGenText = TextAsset('Next Generation',fill=black, style='bold 50pt Times')
     
-    Sprite(nextGenButton,((BW*BB/2),(BH*BB)+30))
+    Sprite(nextGenButton,(((BW*BB/2)-BB),(BH*BB)+30))
     
     redrawAll()
     App().listenMouseEvent('click',mouseClick)
