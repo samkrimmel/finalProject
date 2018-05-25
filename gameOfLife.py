@@ -25,7 +25,7 @@ def redrawAll():
         for y in range(0,BW):
             if data['boardList'][x][y] == 0:
                 Sprite(whiteRect,(y*BB,x*BB))
-            elif data['boardList'][x,y] == 1:
+            elif data['boardList'][x][y] == 1:
                 Sprite(blackRect,(y*BB,x*BB))
 
 """
@@ -61,8 +61,13 @@ if __name__ == '__main__':
     blackLine = LineStyle(1,black)
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
+    nextGenButton = RectangleAsset(40,10,blackLine,white)
+    nextGenText = TextAsset('Next Generation',fill=black, style='bold 50pt Times')
+    
+    Sprite(nextGenButton,((BW*BB/2),(BH*BB)+30))
     
     redrawAll()
+    App().listenMouseEvent('click',mouseClick)
     App().run()
     
     
