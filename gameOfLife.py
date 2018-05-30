@@ -34,17 +34,13 @@ def numNeighbors(row,column):
 def nextGeneration():
 """
 def mouseClick(event):
-    """
-    if (event.x>((BW*BB/2)-BB) and event.x<((BW*BB/2)-BB)+BB*2) and y section
-        refuse all next clicks
-        nextgen
-    elif click within board:
-        if boardList[black(event.x//BB)-1][(event.y//BB)-1] == 0:
-            change to 1
-        elif boardList[black(event.x//BB)-1][(event.y//BB)-1] == 1:
-            change to 0
-            """
-        
+    if (event.x>((BW*BB/2)-BB) and event.x<((BW*BB/2)-BB)+BB*2) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
+        #nextGeneration()
+    elif event.x<(BW*BB) and event.y<(BH*BB):
+        if boardList[(event.x//BB)-1][(event.y//BB)-1] == 0:
+            boardList[(event.x//BB)-1][(event.y//BB)-1] = 1
+        elif boardList[(event.x//BB)-1][(event.y//BB)-1] == 1:
+            boardList[(event.x//BB)-1][(event.y//BB)-1] = 0
     redrawAll()
 
 
