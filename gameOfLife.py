@@ -37,10 +37,10 @@ def mouseClick(event):
     if (event.x>((BW*BB/2)-BB) and event.x<((BW*BB/2)-BB)+BB*2) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
         nextGeneration()
     elif event.x<(BW*BB) and event.y<(BH*BB):
-        if data['boardList'][(event.x//BB)-1][(event.y//BB)-1] == 0:
-            data['boardList'][(event.x//BB)-1][(event.y//BB)-1] = 1
-        elif data['boardList'][(event.x//BB)-1][(event.y//BB)-1] == 1:
-            data['boardList'][(event.x//BB)-1][(event.y//BB)-1] = 0
+        if data['boardList'][(event.x//BB)][(event.y//BB)] == 0:
+            data['boardList'][(event.x//BB)][(event.y//BB)] = 1
+        elif data['boardList'][(event.x//BB)][(event.y//BB)] == 1:
+            data['boardList'][(event.x//BB)][(event.y//BB)] = 0
     redrawAll()
 
 
