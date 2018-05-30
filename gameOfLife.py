@@ -41,6 +41,7 @@ def mouseClick(event):
             data['boardList'][(event.x//BB)][(event.y//BB)] = 1
         elif data['boardList'][(event.x//BB)][(event.y//BB)] == 1:
             data['boardList'][(event.x//BB)][(event.y//BB)] = 0
+    print(data['boardList'])
     redrawAll()
 
 
