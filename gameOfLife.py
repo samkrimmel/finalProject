@@ -42,6 +42,8 @@ def numNeighbors(row,col):
             #dont check anything right of col
         else:
             #check all
+            
+        
         if data['boardList'][row-1][col+i] == 1:
             nb += 1
         if data['boardList'][row][col+i] == 1: #THIS WILL COUNT ROW,COLUMN AS LIVING IF IT IS BLACK
