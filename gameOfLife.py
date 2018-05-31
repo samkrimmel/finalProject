@@ -12,11 +12,10 @@ BB = 20
 
 #FUNCTIONS
 
-def buildBoard(): ####DICTIONARY
+def buildBoard():
     boardList = [0]*BH
-    boardw = [0]*BW
     for i in range(0,BH):
-        boardList[i] = boardw
+        boardList[i] = [0]*BW
     return boardList
     
 
