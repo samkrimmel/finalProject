@@ -29,9 +29,17 @@ def redrawAll():
             elif data['boardList'][x][y] == 1:
                 Sprite(blackRect,(x*BB,y*BB))
 
-"""
+
 def numNeighbors(row,column):
-    
+    for i in range(-1,2):
+        if data['boardList'][row-1][col+i] == 1:
+            nb += 1
+        if data['boardList'][row][col+i] == 1: #THIS WILL COUNT ROW,COLUMN AS LIVING IF IT IS BLACK
+            nb += 1
+        if data['boardList'][row+1][col+i] == 1:
+            nb += 1
+    return nb
+"""
 def nextGeneration():
 """
 def mouseClick(event):
@@ -70,6 +78,5 @@ if __name__ == '__main__':
     redrawAll()
     App().listenMouseEvent('click',mouseClick)
     App().run()
-    
     
     
