@@ -30,8 +30,18 @@ def redrawAll():
                 Sprite(blackRect,(x*BB,y*BB))
 
 
-def numNeighbors(row,column):
+def numNeighbors(row,col):
     for i in range(-1,2):
+        if row+i == -1:
+            #dont check anything above row
+        elif col+i == -1:
+            #dont check anything left of col
+        elif row+i == BH+1:
+            #dont check anything below row
+        elif col+i == BW+1:
+            #dont check anything right of col
+        else:
+            #check all
         if data['boardList'][row-1][col+i] == 1:
             nb += 1
         if data['boardList'][row][col+i] == 1: #THIS WILL COUNT ROW,COLUMN AS LIVING IF IT IS BLACK
