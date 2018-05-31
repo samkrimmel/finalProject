@@ -23,9 +23,9 @@ def redrawAll():
     for x in range(0,BH):
         for y in range(0,BW):
             if data['boardList'][x][y] == 0:
-                Sprite(whiteRect,(y*BB,x*BB))
+                Sprite(whiteRect,(x*BB,y*BB))
             elif data['boardList'][x][y] == 1:
-                Sprite(blackRect,(y*BB,x*BB))
+                Sprite(blackRect,(x*BB,y*BB))
 
 """
 def numNeighbors(row,column):
