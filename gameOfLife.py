@@ -20,6 +20,8 @@ def buildBoard():
     
 
 def redrawAll():
+    for item in App().spritelist[:]:
+        item.destroy()
     for x in range(0,BH):
         for y in range(0,BW):
             if data['boardList'][x][y] == 0:
