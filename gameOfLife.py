@@ -35,17 +35,19 @@ def numNeighbors(row,col): #THIS DOES NOT WORK !!!
         if row+i == -1:
             if data['boardList'][row-1][col+i] == 1: #Checks bottom
                 nb += 1
-            if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1]: #Checks middle
+            if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
                 nb += 1
         elif col+i == -1:
-            #dont check anything left of col
+            if data['boardList'][row+i][col+1] == 1:
+                nb += 1
         elif row+i == BH+1:
             if data['boardList'][row+1][col+i] == 1: #Checks top
                 nb += 1
-            if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1]: #Checks middle
+            if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
                 nb += 1
         elif col+i == BW+1:
-            #dont check anything right of col
+            if data['boardList'][row+i][col-1] == 1:
+                nb += 1
         else:
             if data['boardList'][row-1][col+i] == 1: #Checks bottom
                 nb += 1
