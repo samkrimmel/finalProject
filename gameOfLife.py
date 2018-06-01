@@ -33,6 +33,7 @@ def redrawAll():
 
 
 def numNeighbors(row,col):
+    nb = 0
     for i in range(-1,2):
         if row+i == -1:
             if data['boardList'][row-1][col+i] == 1: #Checks bottom
