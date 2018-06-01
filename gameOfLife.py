@@ -91,6 +91,7 @@ if __name__ == '__main__':
     nextGenButton = RectangleAsset(BB*3,BH*2,blackLine,white)
     nextGenText = TextAsset('Next Generation',fill=black, style='bold 50pt Times')
     
+    redrawAll()
     App().listenMouseEvent('click',mouseClick)
     App().run()
     
