@@ -55,14 +55,6 @@ def numNeighbors(row,col): #THIS DOES NOT WORK !!!
                 nb += 1
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1]: #Checks middle
                 nb += 1
-        
-        
-        if data['boardList'][row-1][col+i] == 1:
-            nb += 1
-        if data['boardList'][row][col+i] == 1: #THIS WILL COUNT ROW,COLUMN AS LIVING IF IT IS BLACK
-            nb += 1
-        if data['boardList'][row+1][col+i] == 1:
-            nb += 1
     return nb
 """
 def nextGeneration():
@@ -100,7 +92,7 @@ if __name__ == '__main__':
     Sprite(nextGenButton,(((BW*BB/2)-BB),(BH*BB)+30))
     Sprite(nextGenText,(((BW*BB/2)-BB),(BH*BB)+30))
     
-    redrawAll()
+    buildBoard()
     App().listenMouseEvent('click',mouseClick)
     App().run()
     
