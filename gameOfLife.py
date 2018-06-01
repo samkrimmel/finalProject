@@ -36,7 +36,7 @@ def numNeighbors(row,col):
     nb = 0
     for i in range(-1,2):
         if row+i == -1:
-            if data['boardList'][row-1][col+i] == 1: #Checks bottom
+            if data['boardList'][row+1][col+i] == 1: #Checks bottom
                 nb += 1
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
                 nb += 1
@@ -52,9 +52,9 @@ def numNeighbors(row,col):
             if data['boardList'][row+i][col-1] == 1:
                 nb += 1
         else:
-            if data['boardList'][row-1][col+i] == 1: #Checks bottom
+            if data['boardList'][row+1][col+i] == 1: #Checks bottom
                 nb += 1
-            if data['boardList'][row+1][col+i] == 1: #Checks top
+            if data['boardList'][row-1][col+i] == 1: #Checks top
                 nb += 1
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1]: #Checks middle
                 nb += 1
