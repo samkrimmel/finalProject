@@ -32,7 +32,7 @@ def redrawAll():
     Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30))
 
 
-def numNeighbors(row,col): #THIS DOES NOT WORK !!!
+def numNeighbors(row,col):
     for i in range(-1,2):
         if row+i == -1:
             if data['boardList'][row-1][col+i] == 1: #Checks bottom
@@ -60,6 +60,18 @@ def numNeighbors(row,col): #THIS DOES NOT WORK !!!
     return nb
 """
 def nextGeneration():
+    
+    for c in range(0,BW):
+        for r in range(0,BH):
+            boxnb = numNeighbors(r,i)
+            if data['boardList'][r][i] == 1:
+                if boxnb < 2 or boxnb > 3:
+                    data['newBoardList'][r][i] = 0
+                if boxnb == 2 or boxnb == 3:
+                    data['newBoardList'][r][i] = 1
+            elif data['boardList'][r][i] == 0:
+                if boxnb == 3:
+                    data['newBoardList'][r][i] = 1
 """
 def mouseClick(event):
     if (event.x>((BW*BB/2)-2*BB) and event.x<((BW*BB/2)-2*BB)+BB*4) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
@@ -78,6 +90,7 @@ if __name__ == '__main__':
     
     data = {}
     data['boardList'] = buildBoard()
+    data['newBoardList'] = buildBoard()
     
     #GRAPHICS
         
