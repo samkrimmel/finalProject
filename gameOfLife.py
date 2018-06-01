@@ -62,7 +62,7 @@ def numNeighbors(row,col): #THIS DOES NOT WORK !!!
 def nextGeneration():
 """
 def mouseClick(event):
-    if (event.x>((BW*BB/2)-BB) and event.x<((BW*BB/2)-BB)+BB*2) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
+    if (event.x>((BW*BB/2)-2*BB) and event.x<((BW*BB/2)-2*BB)+BB*4) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
         nextGeneration()
     elif event.x<(BW*BB) and event.y<(BH*BB):
         if data['boardList'][(event.x//BB)][(event.y//BB)] == 0:
