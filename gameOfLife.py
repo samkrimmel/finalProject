@@ -32,7 +32,7 @@ def redrawAll():
     Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30))
 
 
-def numNeighbors(row,col):
+def numNeighbors(row,col): #NEEDS HELP
     nb = 0
     for i in range(-1,2):
         if row+i == -1:
