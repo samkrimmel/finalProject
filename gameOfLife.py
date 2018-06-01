@@ -44,7 +44,7 @@ def numNeighbors(row,col):
             if data['boardList'][row+i][col+1] == 1:
                 nb += 1
         elif row+i == BH+1:
-            if data['boardList'][row+1][col+i] == 1: #Checks top
+            if data['boardList'][row-1][col+i] == 1: #Checks top
                 nb += 1
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
                 nb += 1
