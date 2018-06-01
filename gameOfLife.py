@@ -58,7 +58,7 @@ def numNeighbors(row,col):
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1]: #Checks middle
                 nb += 1
     return nb
-"""
+
 def nextGeneration():
     
     for c in range(0,BW):
@@ -72,7 +72,7 @@ def nextGeneration():
             elif data['boardList'][r][i] == 0:
                 if boxnb == 3:
                     data['newBoardList'][r][i] = 1
-"""
+
 def mouseClick(event):
     if (event.x>((BW*BB/2)-2*BB) and event.x<((BW*BB/2)-2*BB)+BB*4) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
         nextGeneration()
