@@ -28,6 +28,8 @@ def redrawAll():
                 Sprite(whiteRect,(x*BB,y*BB))
             elif data['boardList'][x][y] == 1:
                 Sprite(blackRect,(x*BB,y*BB))
+    Sprite(nextGenButton,(((BW*BB/2)-BB),(BH*BB)+30))
+    Sprite(nextGenText,(((BW*BB/2)-BB),(BH*BB)+30))
 
 
 def numNeighbors(row,col): #THIS DOES NOT WORK !!!
@@ -86,13 +88,9 @@ if __name__ == '__main__':
     blackLine = LineStyle(1,black)
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
-    nextGenButton = RectangleAsset(BB*2,BH,blackLine,white)
+    nextGenButton = RectangleAsset(BB*3,BH*2,blackLine,white)
     nextGenText = TextAsset('Next Generation',fill=black, style='bold 50pt Times')
     
-    Sprite(nextGenButton,(((BW*BB/2)-BB),(BH*BB)+30))
-    Sprite(nextGenText,(((BW*BB/2)-BB),(BH*BB)+30))
-    
-    buildBoard()
     App().listenMouseEvent('click',mouseClick)
     App().run()
     
