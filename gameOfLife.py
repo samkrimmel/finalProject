@@ -28,8 +28,8 @@ def redrawAll():
                 Sprite(whiteRect,(x*BB,y*BB))
             elif data['boardList'][x][y] == 1:
                 Sprite(blackRect,(x*BB,y*BB))
-    Sprite(nextGenButton,(((BW*BB/2)-BB),(BH*BB)+30))
-    Sprite(nextGenText,(((BW*BB/2)-BB),(BH*BB)+30))
+    Sprite(nextGenButton,(((BW*BB/2)-2*BB),(BH*BB)+30))
+    Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30))
 
 
 def numNeighbors(row,col): #THIS DOES NOT WORK !!!
