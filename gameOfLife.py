@@ -63,15 +63,15 @@ def nextGeneration():
     
     for c in range(0,BW):
         for r in range(0,BH):
-            boxnb = numNeighbors(r,i)
-            if data['boardList'][r][i] == 1:
+            boxnb = numNeighbors(r,c)
+            if data['boardList'][r][c] == 1:
                 if boxnb < 2 or boxnb > 3:
-                    data['newBoardList'][r][i] = 0
+                    data['newBoardList'][r][c] = 0
                 if boxnb == 2 or boxnb == 3:
-                    data['newBoardList'][r][i] = 1
-            elif data['boardList'][r][i] == 0:
+                    data['newBoardList'][r][c] = 1
+            elif data['boardList'][r][c] == 0:
                 if boxnb == 3:
-                    data['newBoardList'][r][i] = 1
+                    data['newBoardList'][r][c] = 1
     data['boardList'] = data['newBoardList']
     redrawAll()
 
