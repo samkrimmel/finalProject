@@ -88,8 +88,8 @@ if __name__ == '__main__':
     blackLine = LineStyle(1,black)
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
-    nextGenButton = RectangleAsset(BB*3,BH*2,blackLine,white)
-    nextGenText = TextAsset('Next Generation',fill=black, style='bold 50pt Times')
+    nextGenButton = RectangleAsset(BB*4,BH*3,blackLine,white)
+    nextGenText = TextAsset('Next Generation',fill=black, style='bold 20pt Times')
     
     redrawAll()
     App().listenMouseEvent('click',mouseClick)
