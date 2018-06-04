@@ -87,7 +87,9 @@ def numNeighbors(row,col): #NEEDS HELP
                 #bottom edge
                 if data['boardList'][row-1][col+i] == 1: #Checks top
                     nb += 1
-                if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
+                if data['boardList'][row][col-1] == 1:
+                    nb += 1
+                if data['boardList'][row][col+1] == 1: #Checks middle
                     nb += 1
         
         else:
@@ -95,12 +97,16 @@ def numNeighbors(row,col): #NEEDS HELP
                 #left edge
                 if data['boardList'][row+i][col+1] == 1: #checks right
                     nb += 1
-                if data['boardList'][row-1][col] == 1 or data['boardList'][row+1][col] == 1: #checks vert middle
+                if data['boardList'][row-1][col] == 1:
+                    nb += 1
+                if data['boardList'][row+1][col] == 1: #checks vert middle
                     nb += 1
             elif col+i == BW+1:
                 if data['boarList'][row+i][col-1] == 1: #checks left
                     nb += 1
-                if data['boardList'][row-1][col] == 1 or data['boardList'][row+1][col] == 1: #checks vert middle
+                if data['boardList'][row-1][col] == 1:
+                    nb += 1
+                if data['boardList'][row+1][col] == 1: #checks vert middle
                     nb += 1
         """
             if data['boardList'][row+1][col+i] == 1: #Checks bottom
