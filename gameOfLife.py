@@ -36,6 +36,62 @@ def numNeighbors(row,col): #NEEDS HELP
     nb = 0
     for i in range(-1,2):
         if row+i == -1:
+            
+            if col+i == -1:
+                #top left corner
+                
+            elif col+i == BW+1:
+                #top right corner
+            
+            else:
+                #top edge
+                if data['boardList'][row+1][col+i] == 1: #Checks bottom
+                    nb += 1
+                if data['boardList'][row][col-1] == 1:
+                    nb += 1
+                if data['boardList'][row][col+1] == 1: #Checks middle
+                    nb += 1
+        
+        elif row+i == BH+1:
+            
+            if col+i == -1:
+                #bottom left corner
+                if data['boardList'][row-1][col] == 1: #checks top 1
+                    nb += 1
+                if data['boardList'][row-1][col+1] == 1: #checks top right
+                    nb += 1
+                if data['boardList'][row][col+1] == 1: #checks right 1
+                    nb += 1
+                
+            elif col+i == BW+1:
+                #bottom right corner
+                if data['boardList'][row-1][col] == 1: #checks top 1
+                    nb += 1
+                if data['boardList'][row-1][col-1] == 1: #checks top left
+                    nb += 1
+                if data['boardList'][row][col-1] == 1: #checks left 1
+                    nb += 1
+            
+            else:
+                #bottom edge
+                if data['boardList'][row-1][col+i] == 1: #Checks top
+                    nb += 1
+                if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
+                    nb += 1
+        
+        else:
+            if col+i == -1:
+                #left edge
+                if data['boardList'][row+i][col+1] == 1: #checks right
+                    nb += 1
+                if data['boardList'][row-1][col] == 1 or data['boardList'][row+1][col] == 1: #checks vert middle
+                    nb += 1
+            elif col+i == BW+1:
+                if data['boarList'][row+i][col-1] == 1: #checks left
+                    nb += 1
+                if data['boardList'][row-1][col] == 1 or data['boardList'][row+1][col] == 1: #checks vert middle
+                    nb += 1
+        """
             if data['boardList'][row+1][col+i] == 1: #Checks bottom
                 nb += 1
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1] == 1: #Checks middle
@@ -58,6 +114,7 @@ def numNeighbors(row,col): #NEEDS HELP
                 nb += 1
             if data['boardList'][row][col-1] == 1 or data['boardList'][row][col+1]: #Checks middle
                 nb += 1
+        """
     return nb
 
 def nextGeneration():
