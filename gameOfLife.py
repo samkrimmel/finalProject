@@ -37,7 +37,7 @@ def numNeighbors(row,col): #NEEDS HELP
     if col != 0:
         if data['boarList'][row+i][col-1] == 1: #checks left
             nb += 1
-    if row != 0:
+    if row != 0: #BADD
         if data['boardList'][row+1][col] == 1: #checks bottom
             nb += 1
     if col != BW:
