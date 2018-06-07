@@ -40,7 +40,7 @@ def numNeighbors(row,col): #NEEDS HELP
     if row != 0: #BADD
         if data['boardList'][row-1][col] == 1: #checks top
             nb += 1
-    if col != BW:
+    if col != BW-1:
         if data['boardList'][row][col+1] == 1: #checks right
             nb += 1
     if row != BH-1:
