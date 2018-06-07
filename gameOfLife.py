@@ -32,12 +32,12 @@ def redrawAll():
     Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30))
 
 
-def numNeighbors(row,col): #NEEDS HELP
+def numNeighbors(row,col):
     nb = 0
     if col != 0:
         if data['boardList'][row][col-1] == 1: #checks left
             nb += 1
-    if row != 0: #BADD
+    if row != 0:
         if data['boardList'][row-1][col] == 1: #checks top
             nb += 1
     if col != BW-1:
