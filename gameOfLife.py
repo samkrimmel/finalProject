@@ -62,7 +62,7 @@ def numNeighbors(row,col):
 
 def nextGeneration(): #Sprites the next generation of cells on the board according to the rules of the game
     
-    data['newBoardList'] = []
+    data['newBoardList'] = buildBoard() #resets new list
     for c in range(0,BW): 
         for r in range(0,BH):
             boxnb = numNeighbors(r,c) #finds the number of neighbors for the cell in loop
