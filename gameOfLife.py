@@ -12,24 +12,24 @@ BB = 20
 
 #FUNCTIONS
 
-def buildBoard():
-    boardList = [0]*BH
-    for i in range(0,BH):
-        boardList[i] = [0]*BW
-    return boardList
+def buildBoard(): #makes a list matrix that represents the board
+    boardList = [0]*BH #make a list with BH zeros
+    for i in range(0,BH): #for every zero
+        boardList[i] = [0]*BW #make BW zeros
+    return boardList 
     
 
-def redrawAll():
-    for item in App().spritelist[:]:
+def redrawAll(): #sprites the right board
+    for item in App().spritelist[:]: #clears everything
         item.destroy()
     for x in range(0,BH):
         for y in range(0,BW):
             if data['boardList'][x][y] == 0:
-                Sprite(whiteRect,(x*BB,y*BB))
+                Sprite(whiteRect,(x*BB,y*BB)) #puts white rect where there are zeros (dead)
             elif data['boardList'][x][y] == 1:
-                Sprite(blackRect,(x*BB,y*BB))
-    Sprite(nextGenButton,(((BW*BB/2)-2*BB),(BH*BB)+30))
-    Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30))
+                Sprite(blackRect,(x*BB,y*BB)) #puts black rect where there are ones (alive)
+    Sprite(nextGenButton,(((BW*BB/2)-2*BB),(BH*BB)+30)) #sprites the button
+    Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30)) #sprites the button text
 
 
 def numNeighbors(row,col):
@@ -75,7 +75,7 @@ def nextGeneration(): #Sprites the next generation of cells on the board accordi
                 if boxnb == 3:
                     data['newBoardList'][r][c] = 1 #If the dead cell has exactly three neighbors, alive in new list
     data['boardList'] = data['newBoardList'] #make the new list the old list
-    redrawAll()
+    redrawAll() #remakes the board
 
 def mouseClick(event):
     if (event.x>((BW*BB/2)-2*BB) and event.x<((BW*BB/2)-2*BB)+BB*4) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
