@@ -69,8 +69,8 @@ def nextGeneration():
             if data['boardList'][r][c] == 1:
                 if boxnb < 2 or boxnb > 3:
                     data['newBoardList'][r][c] = 0
-                if boxnb == 2 or boxnb == 3:
-                    data['newBoardList'][r][c] = 1
+                """if boxnb == 2 or boxnb == 3:
+                    data['newBoardList'][r][c] = 1"""
             elif data['boardList'][r][c] == 0:
                 if boxnb == 3:
                     data['newBoardList'][r][c] = 1
