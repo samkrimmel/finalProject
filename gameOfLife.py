@@ -60,20 +60,21 @@ def numNeighbors(row,col):
             nb += 1
     return nb
 
-def nextGeneration():
+def nextGeneration(): #Sprites the next generation of cells on the board according to the rules of the game
     
-    for c in range(0,BW):
+    data['newBoardList'] = []
+    for c in range(0,BW): 
         for r in range(0,BH):
-            boxnb = numNeighbors(r,c)
-            if data['boardList'][r][c] == 1:
-                if boxnb < 2 or boxnb > 3:
-                    data['newBoardList'][r][c] = 0
+            boxnb = numNeighbors(r,c) #finds the number of neighbors for the cell in loop
+            if data['boardList'][r][c] == 1: #concerning living cells
+                if boxnb < 2 or boxnb > 3: 
+                    data['newBoardList'][r][c] = 0 #If the cell has less than 2 neighbors or more than 3, it is put in new list as dead
                 if boxnb == 2 or boxnb == 3:
-                    data['newBoardList'][r][c] = 1
-            elif data['boardList'][r][c] == 0:
+                    data['newBoardList'][r][c] = 1 #If the cell has 2 or 3 neighbors, it is put in new list as living
+            elif data['boardList'][r][c] == 0: #concerning dead cells
                 if boxnb == 3:
-                    data['newBoardList'][r][c] = 1
-    data['boardList'] = data['newBoardList']
+                    data['newBoardList'][r][c] = 1 #If the dead cell has exactly three neighbors, alive in new list
+    data['boardList'] = data['newBoardList'] #make the new list the old list
     redrawAll()
 
 def mouseClick(event):
