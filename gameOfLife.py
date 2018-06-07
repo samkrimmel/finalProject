@@ -6,9 +6,9 @@ from ggame import *
 
 #CONSTANTS
 
-BH = 10
-BW = 10
-BB = 20
+BH = 10 #board height
+BW = 10 #width
+BB = 20 #cell size
 
 #FUNCTIONS
 
@@ -32,9 +32,9 @@ def redrawAll(): #sprites the right board
     Sprite(nextGenText,(((BW*BB/2)-2*BB),(BH*BB)+30)) #sprites the button text
 
 
-def numNeighbors(row,col):
-    nb = 0
-    if col != 0:
+def numNeighbors(row,col): #checks how many neighbors are around a cell (tricky)
+    nb = 0 
+    if col != 0: #as long as you can check left
         if data['boardList'][row][col-1] == 1: #checks left
             nb += 1
     if row != 0:
@@ -58,7 +58,7 @@ def numNeighbors(row,col):
     if row != BH-1 and col != 0:
         if data['boardList'][row+1][col-1] == 1: #checks bottom left
             nb += 1
-    return nb
+    return nb #returns number of neighbors for an inputted cell
 
 def nextGeneration(): #Sprites the next generation of cells on the board according to the rules of the game
     
@@ -77,23 +77,24 @@ def nextGeneration(): #Sprites the next generation of cells on the board accordi
     data['boardList'] = data['newBoardList'] #make the new list the old list
     redrawAll() #remakes the board
 
-def mouseClick(event):
+def mouseClick(event): #deals with all the mouseclicks and user inputs
     if (event.x>((BW*BB/2)-2*BB) and event.x<((BW*BB/2)-2*BB)+BB*4) and (event.y<((BH*BB)+30+BH) and event.y>(((BH*BB)+30))):
-        nextGeneration()
-    elif event.x<(BW*BB) and event.y<(BH*BB):
-        if data['boardList'][(event.x//BB)][(event.y//BB)] == 0:
-            data['boardList'][(event.x//BB)][(event.y//BB)] = 1
-        elif data['boardList'][(event.x//BB)][(event.y//BB)] == 1:
-            data['boardList'][(event.x//BB)][(event.y//BB)] = 0
-    redrawAll()
+        nextGeneration() #If you hit the next gen button, call the next gen function
+    elif event.x<(BW*BB) and event.y<(BH*BB): #if your click is within a cell on the board
+        if data['boardList'][(event.x//BB)][(event.y//BB)] == 0: #if the cell is white
+            data['boardList'][(event.x//BB)][(event.y//BB)] = 1 #make it black in the list
+        elif data['boardList'][(event.x//BB)][(event.y//BB)] == 1: #if the cell is black
+            data['boardList'][(event.x//BB)][(event.y//BB)] = 0 #make it white in the list
+    redrawAll() #remake the board (because the board is remade after every click, it is not the most responsive game)
 
 
 
 
 if __name__ == '__main__':
     
+    #DICTIONARY
     data = {}
-    data['boardList'] = buildBoard()
+    data['boardList'] = buildBoard() 
     data['newBoardList'] = buildBoard()
     
     #GRAPHICS
@@ -102,6 +103,7 @@ if __name__ == '__main__':
     black = Color(0x000000,1)
     white = Color(0xFFFFFF,1)
     
+        #ITEMS
     blackLine = LineStyle(1,black)
     whiteRect = RectangleAsset(BB,BB,blackLine,white)
     blackRect = RectangleAsset(BB,BB,blackLine,black)
