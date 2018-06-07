@@ -1,6 +1,6 @@
 #Sam Krimmel
 #5/23/18
-#gameOfLife.py - neat
+#gameOfLife.py - Conway's Laggy Game of Life
 
 from ggame import *
 
