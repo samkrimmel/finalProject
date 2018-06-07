@@ -58,7 +58,6 @@ def numNeighbors(row,col):
     if row != BH-1 and col != 0:
         if data['boardList'][row+1][col-1] == 1: #checks bottom left
             nb += 1
-    print(nb)
     return nb
 
 def nextGeneration():
@@ -69,8 +68,8 @@ def nextGeneration():
             if data['boardList'][r][c] == 1:
                 if boxnb < 2 or boxnb > 3:
                     data['newBoardList'][r][c] = 0
-                """if boxnb == 2 or boxnb == 3:
-                    data['newBoardList'][r][c] = 1"""
+                if boxnb == 2 or boxnb == 3:
+                    data['newBoardList'][r][c] = 1
             elif data['boardList'][r][c] == 0:
                 if boxnb == 3:
                     data['newBoardList'][r][c] = 1
