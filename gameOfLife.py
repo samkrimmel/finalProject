@@ -49,10 +49,10 @@ def numNeighbors(row,col): #NEEDS HELP
     if row != 0 and col != 0:
         if data['boardList'][row-1][col-1] == 1: #checks top left
             nb += 1
-    if row != BH-1 and col != BW:
+    if row != BH-1 and col != BW-1:
         if data['boardList'][row+1][col+1] == 1: #checks bottom right
             nb += 1
-    if row != 0 and col != BW:
+    if row != 0 and col != BW-1:
         if data['boardList'][row-1][col+1] == 1: #checks top right
             nb += 1
     if row != BH-1 and col != 0:
